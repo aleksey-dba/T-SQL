@@ -1,3 +1,4 @@
+gem "minima"
 theme: minima
 minima:
   skin: dark
