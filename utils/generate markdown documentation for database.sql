@@ -12,20 +12,20 @@ SET TRAN ISOLATION LEVEL READ UNCOMMITTED;
 
 /* string templates */
 DECLARE @md_params_header NVARCHAR(MAX) = N'
-## Параметри
-|параметр    |тип      |описання     |
+## РџР°СЂР°РјРµС‚СЂРё
+|РїР°СЂР°РјРµС‚СЂ    |С‚РёРї      |РѕРїРёСЃР°РЅРЅСЏ     |
 |------------|---------|-------------|
 ';
 DECLARE @md_columns_header NVARCHAR(MAX) = N'
-## Cтовпці
-|назва       |тип      |описання     |
+## CС‚РѕРІРїС†С–
+|РЅР°Р·РІР°       |С‚РёРї      |РѕРїРёСЃР°РЅРЅСЏ     |
 |------------|---------|-------------|
 ';
 DECLARE @md_referenced_header NVARCHAR(MAX) = N'
-## Залежить від
+## Р—Р°Р»РµР¶РёС‚СЊ РІС–Рґ
 ';
 DECLARE @md_referencing_header NVARCHAR(MAX) = N'
-## Залежні об''єкти
+## Р—Р°Р»РµР¶РЅС– РѕР±''С”РєС‚Рё
 ';
 DECLARE @md_params_tpl NVARCHAR(MAX) = N'|#param#      |#type#    |#description# |
 ';
@@ -34,7 +34,7 @@ DECLARE @md_columns_tpl NVARCHAR(MAX) = N'|#field#      |#type#    |#description
 DECLARE @md_ref_tpl NVARCHAR(MAX) = N'*  [#full_obj_name#](../#type#/#full_obj_name#.md)
 ';
 DECLARE @definition_tpl NVARCHAR(MAX) = N'
-## Визначення
+## Р’РёР·РЅР°С‡РµРЅРЅСЏ
 ```sql
 #definition#
 ```';
